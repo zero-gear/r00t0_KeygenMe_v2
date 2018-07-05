@@ -1,4 +1,4 @@
-### Reverse Engineering [Task](https://forum.tuts4you.com/topic/39969-r00t0-keygenme-v2/) solution write-up
+### r00t0 KeygenMe v2 [Source](https://forum.tuts4you.com/topic/39969-r00t0-keygenme-v2/) solution:
 
 ##### Manual Unpacking of UPX
 Described [here](https://securityxploded.com/unpackingupx.php). x64dbg & scylla are your friends.
@@ -12,13 +12,13 @@ from call to get input name at 0x0061641C to print "_\nRegistration Failed_" at 
 Lets go.
 
 Code analysis is hardened with innumerable absolute jump instructions, that interleave code, so called "_spaghetti-code_".
-![](spaghetti-code.png)
+![](https://github.com/smart-rabbit/r00t0_KeygenMe_v2/blob/master/write-up/spaghetti-code.png)
 Between each asm instruction, there 30-80 trash jump instructions.
 
 x64dbg trace command `TraceIntoConditional 1:[cip]!=0xe9 && 1:[cip]!=0xeb`, which trace until meet not jump instruction save us tons of hours.
 Tracing such way, we stop only at usefull instructions and set software breakpoints on them. Now we can switch to x32dbg 'Breakpoints' tab, and overview
 all instruction that validate _name:serial_ pair.
-![](pure_validation_code.png)
+![](https://github.com/smart-rabbit/r00t0_KeygenMe_v2/blob/master/write-up/pure_validation_code.png)
 
 **Validation algorithm**:
 
