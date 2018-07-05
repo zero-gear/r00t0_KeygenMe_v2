@@ -13,10 +13,10 @@ Lets go.
 Code analysis is hardened with innumerable absolute jump instructions, that interleave code, so called "_spaghetti-code_".
 ![](https://github.com/smart-rabbit/r00t0_KeygenMe_v2/blob/master/images/spaghetti-code.png)
 
-Between each asm instruction, there 30-80 trash jump instructions.
+Between each asm instruction, there are 30-80 trash jump instructions.
 
 x64dbg trace command `TraceIntoConditional 1:[cip]!=0xe9 && 1:[cip]!=0xeb`, which trace until meet not jump instruction save us tons of hours.
-Tracing such way, we stop only at usefull instructions and set software breakpoints on them. Now we can switch to x32dbg '_Breakpoints_' tab, and overview all instructions that validate _name:serial_ pair without trash jumps.
+Tracing such way, we stop only at useful instructions and set software breakpoints on them. Now we can switch to x32dbg '_Breakpoints_' tab, and overview all instructions that validate _name:serial_ pair without trash jumps.
 ![](https://github.com/smart-rabbit/r00t0_KeygenMe_v2/blob/master/images/pure_validation_code.png)
 
 **Validation algorithm**:
