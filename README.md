@@ -4,8 +4,7 @@
 Described [here](https://securityxploded.com/unpackingupx.php). x64dbg & scylla are your friends.
 
 ##### Explore unpacked program control flow
-Using cross-references to strings `Registration name:`, `Registration Serial:`, `\nRegistration Succeeded`, `\nRegistration Failed`
-i located print function(VA _0x007d6f40_) and all calls to it. Single stepping between `print("Registration name:")` and `print("Registration Serial:")`
+Using cross-references to strings `"Registration name:"`, `"Registration Serial:"`, `"\nRegistration Succeeded"`, `"\nRegistration Failed"` i located print function(VA _0x007d6f40_) and all calls to it. Single stepping between `print("Registration name:")` and `print("Registration Serial:")`
  i have empirically defined wrapper function that get input from terminal(VA _0x007D7C70_). Ok, we have narrow range to analyze :
 from call to get input name at _0x0061641C_ to call of `print("_\nRegistration Failed_")` at _0x006FF521_ or call of `print("\nRegistrationSucceeded")` at 0x006EFCE1.
 
