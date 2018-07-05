@@ -104,4 +104,4 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 ```
-Also posted [here](https://forum.tuts4you.com/topic/39969-r00t0-keygenme-v2/?do=findComment&comment=195978)
+Also posted on _Tuts 4 You_ [[link](https://forum.tuts4you.com/topic/39969-r00t0-keygenme-v2/?do=findComment&comment=195978)].
