@@ -7,7 +7,7 @@ Described [here](https://securityxploded.com/unpackingupx.php). x64dbg & scylla 
 Using cross-references to strings "_Registration name:_", "_Registration Serial:_", "_\nRegistration Succeeded_", "_\nRegistration Failed_"
 i located print function(VA 0x007d6f40) and all calls to it. Single stepping between print("_Registration name:_") and print("_Registration Serial:_")
  i have empirically defined wrapper function that get input from terminal(VA 0x007D7C70). Ok, we have narrow range to analyze :
-from call to get input name at 0x0061641C to print "_\nRegistration Failed_" at 0x006FF521 or print "_\nRegistration Succeeded_" at 0x006EFCE1.
+from call to get input name at 0x0061641C to call of print("_\nRegistration Failed_") at 0x006FF521 or call of print("_\nRegistrationSucceeded_") at 0x006EFCE1.
 
 Lets go.
 
