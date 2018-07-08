@@ -10,7 +10,7 @@ from call to get input name at _0x0061641C_ to call of `print("_\nRegistration F
 
 Lets go.
 
-Code analysis is hardened with innumerable absolute jump instructions, that interleave code, so called "_spaghetti-code_".
+Code analysis is hardened with innumerable unconditional jump instructions, that interleave code, so called "_spaghetti-code_".
 ![](https://github.com/smart-rabbit/r00t0_KeygenMe_v2/blob/master/images/spaghetti-code.png)
 
 Between each asm instruction, there are 30-80 trash jump instructions.
